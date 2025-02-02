@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="firstName">First Name : </label>
+      <br />
+      <input
+        type="text"
+        name="FirstName"
+        id="firstName"
+        placeholder="Please Enter Your First Name"
+        required
+        maxlength="16"
+        minlength="8"
+        value="karla"
+      />
+      <br />
+      <br />
+      <label for="lastName">Last Name : </label>
+      <br />
+      <input
+        type="text"
+        name="LastName"
+        id="lastName"
+        placeholder="Please Enter Your Last Name"
+        required
+      />
+      <!-- the value in the for must be the same as the value of the id  -->
+      <br />
+      <br />
+      <label for="age">Age : </label>
+      <br />
+      <input
+        type="number"
+        name="age"
+        id="age"
+        placeholder="Please Enter Your Last Name"
+        required
+        min="10"
+        max="1000"
+      />
+      <br />
+      <br />
+      <label for="email">Email : </label>
+      <br />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Please Enter Your Email"
+        required
+      />
+      <br />
+      <br />
+      <label for="password">Password : </label>
+      <br />
+      <input
+        type="password"
+        name="Password"
+        id="password"
+        placeholder="Please Enter Your Password"
+        required
+      />
+      <br />
+      <br />
+      <label for="date">Birthday : </label>
+      <br />
+      <input
+        type="date"
+        name="date"
+        id="date"
+        placeholder="Please Enter Your Birthday"
+        required
+      />
+      <br />
+      <br />
+
+      <label for="datetime">Date Time : </label>
+      <br />
+      <input
+        type="datetime"
+        name="datetime"
+        id="datetime"
+        placeholder="Please Enter Your Datetime"
+        required
+      />
+      <br />
+      <br />
+      <label for="datetime2">Date Time2 : </label>
+      <br />
+      <input
+        type="datetime-local"
+        name="datetime2"
+        id="datetime2"
+        value="c"
+        required
+      />
+      <br />
+      <br />
+      <input type="submit" value="Save" />
+    </form>
+    <!-- http://127.0.0.1:5500/Assignment9/index.html?firstName=Sara&lastName=Salameh&email=qrw%40lfrp -->
+    <!-- from theabove url this "firstName=Sara&lastName=Salameh&email=qrw%40lfrp" is called "query parameter" -->
+    <!-- the value that in the query parameter is the same of the value in the name="" -->
+  </body>
+</html>
