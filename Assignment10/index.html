@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="firstName">First Name : </label>
+      <br />
+      <input
+        type="text"
+        name="FirstName"
+        id="firstName"
+        placeholder="Please Enter Your First Name"
+        required
+        maxlength="16"
+      />
+      <br />
+      <br />
+      <label for="secondName">Second Name : </label>
+      <br />
+      <input
+        type="text"
+        name="secondName"
+        id="lastName"
+        placeholder="Please Enter Your Last Name"
+        maxlength="16"
+      />
+      <br />
+      <br />
+      <label for="lastName">Last Name : </label>
+      <br />
+      <input
+        type="text"
+        name="LastName"
+        id="lastName"
+        placeholder="Please Enter Your Last Name"
+        required
+        maxlength="16"
+      />
+      <br />
+      <br />
+      <label for="age">Age : </label>
+      <br />
+      <input
+        type="text"
+        name="age"
+        id="age"
+        placeholder="Please Enter Your Last Name"
+        required
+      />
+      <br />
+      <br />
+      <label for="date">Birthday : </label>
+      <br />
+      <input
+        type="date"
+        name="date"
+        id="date"
+        placeholder="Please Enter Your Birthday"
+        required
+        max="2025-02-03"
+      />
+      <br />
+      <br />
+      <label for="email">Email : </label>
+      <br />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Please Enter Your Email"
+        required
+      />
+      <br />
+      <br />
+      <label for="password">Password : </label>
+      <br />
+      <input
+        type="password"
+        name="Password"
+        id="password"
+        placeholder="Please Enter Your Password"
+        required
+        minlength="8"
+      />
+      <br />
+      <br />
+      <label for="datetime">Gender</label>
+      <br />
+      <input type="radio" name="gender" id="gender" value="1" />Male
+      <input type="radio" name="gender" id="gender" value="0" checked />Female
+      <!-- the name must bethe same for one group -->
+      <!-- the value is nessesary for every field -->
+      <br />
+      <br />
+      <label for="skills">Skills:</label>
+      <br />
+
+      <input type="checkbox" name="skills" id="html" value="HTML" checked />
+      <label for="html">HTML</label>
+      <br />
+
+      <input type="checkbox" name="skills" id="css" value="CSS" checked />
+      <label for="css">CSS</label>
+      <br />
+
+      <input type="checkbox" name="skills" id="javascript" value="JavaScript" />
+      <label for="javascript">JavaScript</label>
+      <br />
+
+      <input type="checkbox" name="skills" id="php" value="PHP" />
+      <label for="php">PHP</label>
+      <br />
+
+      <input type="checkbox" name="skills" id="python" value="Python" />
+      <label for="python">REACT</label>
+      <br />
+
+      <input type="checkbox" name="skills" id="sql" value="SQL" />
+      <label for="sql">SQL</label>
+      <br />
+      <br />
+      <br />
+      <select name="country" id="country" multiple>
+        <option value="jo">Jodan</option>
+        <option value="us">United States</option>
+        <option value="eg">Egypt</option>
+        <option value="uae">UAE</option>
+        <option value="ksa">KSA</option>
+      </select>
+      <br />
+      <br />
+      <input type="text" list="country" name="country">
+      <datalist name="country" id="country">
+        <option value="jo">Jodan</option>
+        <option value="us">United States</option>
+        <option value="eg">Egypt</option>
+        <option value="uae">UAE</option>
+        <option value="ksa">KSA</option>
+      </datalist>
+      <br />
+      <br />
+      <input type="submit" value="Save" />
+      <br />
+      <br />
+    </form>
+  </body>
+</html>
