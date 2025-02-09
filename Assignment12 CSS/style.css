@@ -1,0 +1,54 @@
+/* h1{
+    color: #845ec2;
+}
+h2{
+    color: #d65db1;
+}
+h3{
+    color: #ff6f91;
+}
+p{
+    color: #ff9671;
+} */
+
+body{
+    background-image: url("home2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* height: 400vh; */
+    background-size: 70% 20%; /* the first is for width */
+}
+
+h1 {
+    color: #845ec2;
+}
+
+._blue{
+    color: blue;
+}
+
+.bold700{
+    font-weight: 700;
+
+}
+
+#bold600{
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
