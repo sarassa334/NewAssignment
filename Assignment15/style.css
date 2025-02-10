@@ -1,0 +1,14 @@
+.flex {
+  display: flex;
+  border: 1px solid black;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: space-between;
+flex-wrap: wrap;
+}
+
+
+
+img{
+    width: 200px;
+}
