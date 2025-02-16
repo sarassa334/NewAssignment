@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgb(209,215,219);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.child1,
+.child2,
+.child3 {
+width: 500px;
+  height: 90vh;
+  border: 1px solid rgb(209,215,219);
+}
+.child1{
+    max-width: 50px;
+}
+.child2{
+    max-width: 350px;
+}
+.child3{
+    max-width: 1000px;
+}
+
+.flex1 {
+  flex: 0.4;
+}
+.flex2 {
+  flex: 3;
+}
+.flex3 {
+  flex: 6;
+}
+/* .child2,.child3{
+    overflow: auto;
+} */
+
+/* Sidebar icons */
+.child1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    background: rgb(240,242,245);
+  }
+
+  .child1 i{
+    color: rgb(84,101,111);
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  
+  .child1 .one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+  }
+  
+  .child1 .two {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 10px; 
+  }
+  .two img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  /* chats */
+
+ .child2 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  .icons i{
+    gap: 20px;
+    color: rgb(84,101,111);
+    font-size: 20px;
+  }
+  
+  .search {
+    padding: 20px;
+    text-align: center;
+
+  }
+  
+  .search input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: rgb(240,242,245);
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  /* cards */
+  .card {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+  }
+  .card:hover{
+    background: rgb(240,242,245);
+  }
+.left{
+    padding-right: 30px;
+    justify-content: end;
+}
+ 
+.right i{
+    float: right;
+}
+
+
+  .card img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.chats{
+    overflow: auto;
+    padding: 20px;
+    scrollbar-width: thin;
+}
+
+
+/* chat content */
+/* General Styles */
+.child3 {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    border: 1px solid rgb(209, 215, 219);
+  }
+  
+  .chat-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f2f5;
+    border-bottom: 1px solid #d1d7db;
+  }
+  .chat-header img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .contact-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .contact-info h2 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .contact-info p {
+    margin: 0;
+    font-size: 12px;
+    color: gray;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #e5ddd5;
+  }
+  
+  .message {
+    max-width: 60%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .received {
+    background-color: #fff;
+    align-self: flex-start;
+  }
+  
+  .sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+  }
+  
+  .timestamp {
+    font-size: 10px;
+    color: gray;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f0f2f5;
+    border-top: 1px solid #d1d7db;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #d1d7db;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+  
+  .chat-input button {
+    padding: 10px 20px;
+    background-color: #075e54;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .chat-messages{
+    overflow: auto;
+    padding: 20px 5px 0 0 ;
+    scrollbar-width: thin;
+  }
