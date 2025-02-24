@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif;
+  /* overflow: hidden; */
 }
 
 body {
@@ -13,23 +14,48 @@ body {
 }
 
 .parent {
-  flex: 1;
+  /* display: flex;
+  flex-direction: row;
+  border: 1px solid rgb(209,215,219);
+  justify-content: center;
+  align-items: center;
+  padding: 20px; */
   display: flex;
   flex-direction: row;
   border: 1px solid rgb(209, 215, 219);
   justify-content: center;
   align-items: center;
+  /* padding: 20px; */
   flex-wrap: wrap;
-  max-width: 1300px; /* was 1000px */
+  max-width: 1400px; /* was 1000px */
+  width: 97%; /*added/was 90%*/
 }
 .child1,
 .child2,
 .child3 {
-  /*width: 500px;*/ /*not nessecary*/
+  width: 500px;
   height: 95vh; /*was 90*/
   border: 1px solid rgb(209, 215, 219);
 }
-/***************************************************************************/
+
+.child1 {
+  max-width: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.child1 ul{
+  list-style-type: none; 
+}
+.child2 {
+  max-width: 350px;
+  min-width: 235px; /**/
+  display: flex; /**/
+  flex-direction: column;/**/
+}
+.child3 {
+  max-width: 1000px;
+  /* margin-top: 10px; */
+}
 
 .flex1 {
   flex: 0.4;
@@ -40,18 +66,13 @@ body {
 .flex3 {
   flex: 6;
 }
-/* *********************************************************************************************************************** */
-/* child1/ sidebar */
+/* child 1 - sidebar */
 /* Sidebar icons */
 .child1 {
   display: flex;
   flex-direction: column;
-  max-width: 50px;
   justify-content: space-between;
   background: rgb(240, 242, 245);
-}
-.child1 ul {
-  list-style-type: none;
 }
 
 .child1 i {
@@ -71,7 +92,7 @@ body {
 .child1 .two {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */ /*unnessecary because the spacebetween does the job */
+  justify-content: flex-end;
   align-items: center;
   gap: 10px;
 }
@@ -80,13 +101,12 @@ body {
   height: 30px;
   border-radius: 50%;
 }
-/* *********************************************************************************************************************** */
-/*child2/ chats */
+
+/*child2 chats */
+
 .child2 {
-  display: flex; /**/
-  flex-direction: column; /**/
-  max-width: 350px; /**/
-  min-width: 235px; /**/
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -96,12 +116,13 @@ body {
   padding: 10px;
 }
 
-/* .header h1 {
+.header h1 {
   margin: 0;
-} */
+  font-size:large;
+}
 
 .icons i {
-  /* gap: 20px; */
+  gap: 20px;
   color: rgb(84, 101, 111);
   font-size: 20px;
 }
@@ -111,28 +132,21 @@ body {
   text-align: center;
 }
 
-.search input[type="text"] { /*more specific selection*/
-  width: 100%; 
+.search input[type="text"] {
+  width: 100%;
   padding: 8px 12px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 14px;
   background-color: rgb(240, 242, 245);
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 /* cards */
-
-.chats {
-  /* display: flex;*/ /* unnecessary */
-  /* flex-direction: column; */ /* unnecessary */
-  overflow: auto;
-  padding: 20px;
-  scrollbar-width: thin;
-}
 .card {
   display: flex;
-  justify-content: space-between;
   padding: 10px;
-  gap: 10px; /**/
+  gap: 10px;
 }
 .card:hover {
   background: rgb(240, 242, 245);
@@ -142,39 +156,32 @@ body {
   height: 40px;
   border-radius: 50%;
 }
-/* from here */
-/* .left,.right{
-  display: flex;
-  flex-direction: column;
-} */
 .left {
   padding-right: 30px;
+  justify-content: end;
 }
-.left .messag {
-  font-weight: 500;
-  font-size: 14px;
-  color: rgb(127, 140, 182);
+.name{
+  margin-bottom: 10px;
 }
 
 .right i {
   float: right;
-  color: rgb(84, 101, 111);
 }
-.right .time {
-  margin-bottom: 10px;
+.right p {
+margin-bottom: 10px;
 }
-.name {
-  margin-bottom: 10px;
+.chats {
+  overflow: auto;
+  padding: 20px;
+  scrollbar-width: thin;
 }
-/* *********************************************************************************************************************** */
-/*child3/ chat content */
+/* ************************************************************************ */
+/* chat content */
 .child3 {
   display: flex;
   flex-direction: column;
-  /* height: 95vh; */
+  height: 95vh;
   border: 1px solid rgb(209, 215, 219);
-  max-width: 1000px;
-  /* margin-top: 10px; */
 }
 
 .chat-header {
@@ -191,49 +198,56 @@ body {
   margin-right: 10px;
 }
 
+.contact-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
 .contact-info h2 {
+  margin: 0;
   font-size: 16px;
 }
 
 .contact-info p {
+  margin: 0;
   font-size: 12px;
   color: gray;
 }
 
-/*my adjusments*/
 .chat-messages {
-  flex: 1; /**/
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
   background-color: #e5ddd5;
-  overflow: auto;
-  scrollbar-width: thin;
-  padding: 20px 8px 0px 8px;
+  /* background:url(images/whats-backg.jpg); */
 }
+
 .message {
   max-width: 60%;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  /*position: relative;*/ /*for timestamp*/
+  position: relative;
 }
-.timestamp {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 10px;
-  color: gray;
-  /*position: absolute;*/ /**/
-  /* bottom: 5px;
-  right: 10px; */
-}
-/*end my adjusments*/
 
 .received {
   background-color: #fff;
-  margin-right: auto; /*messages on the left*/
+  align-self: flex-start;
 }
 
 .sent {
   background-color: #dcf8c6;
-  margin-left: auto; /*messages on the right*/
+  align-self: flex-end;
+}
+
+.timestamp {
+  font-size: 10px;
+  color: gray;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
 }
 
 .chat-input {
@@ -247,7 +261,7 @@ body {
   flex: 1;
   padding: 10px;
   border: 1px solid #d1d7db;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-right: 10px;
 }
 
@@ -258,4 +272,10 @@ body {
   border: none;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.chat-messages {
+  overflow: auto;
+  padding: 20px 5px 0 0;
+  scrollbar-width: thin;
 }
