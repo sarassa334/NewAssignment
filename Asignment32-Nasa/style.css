@@ -1,0 +1,346 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  /* overflow:hidden; */
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Ensure no horizontal overflow */
+}
+
+/* Navbar ***********************************************************************************************************************************/
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Sidebar Styles */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hide by default */
+  width: 250px;
+  height: 100vh;
+  background: #111;
+  color: white;
+  padding-top: 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.menu-checkbox:checked ~ .side-nav {
+  left: 0;
+}
+
+.close-btn {
+  font-size: 24px;
+  color: white;
+  text-align: right;
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.menu-checkbox {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  z-index: 1000;
+  background: #000;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: none;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav li {
+  padding: 15px;
+  border-bottom: 1px solid #444;
+}
+
+.side-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.side-nav {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: black;
+}
+
+.menu-checkbox:checked ~ .side-nav {
+  transform: translateX(0);
+}
+
+@media (max-width: 990px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-nav {
+    width: 100%; /* Ensure sidebar fits on smaller screens */
+  }
+
+  .menu-icon {
+    left: 10px;
+  }
+}
+
+/* Main ***********************************************************************************************************************************/
+
+.main {
+  background: url('https://images-assets.nasa.gov/image/iss072e646081/iss072e646081~medium.jpg') no-repeat;
+  opacity: 0.99999;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.lead {
+  color: white;
+}
+
+.btn1 {
+  height: 45px;
+  width: 35%;
+  border: none;
+  outline: none;
+  background-color: rgb(216, 57, 51);
+  color: white;
+  font-weight: 700;
+  border-radius: 60px;
+}
+
+@media (max-width: 1200px) {
+  .main h1 {
+    font-size: 3.5rem;
+  }
+
+  .parag {
+    font-size: 1.1rem;
+  }
+
+  .btn1 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main h1 {
+    font-size: 2.5rem;
+  }
+
+  .parag {
+    font-size: 1rem;
+  }
+
+  .btn1 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main h1 {
+    font-size: 2rem;
+  }
+
+  .parag {
+    font-size: 0.9rem;
+  }
+
+  .btn1 {
+    width: 70%;
+  }
+}
+
+/* Section2 ***********************************************************************************************************************************/
+.section2 {
+  height: 100vh;
+}
+
+.Section2 .full-height-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Section3 ***********************************************************************************************************************************/
+.Section5 {
+  background: url(./images/section5.jpg) no-repeat;
+  opacity: 0.8;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Section5 h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.parag {
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .Section5 h1 {
+    font-size: 3.5rem;
+  }
+
+  .parag {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Section5 h1 {
+    font-size: 2.5rem;
+  }
+
+  .parag {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Section5 h1 {
+    font-size: 2rem;
+  }
+
+  .parag {
+    font-size: 0.9rem;
+  }
+}
+
+/* Section8 ***********************************************************************************************************************************/
+.Section8 {
+  margin-top: 30px;
+  background: url(./images/section8.jpg) no-repeat;
+  opacity: 0.8;
+  background-size: cover;
+  height: 90vh;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Section8 h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.parag {
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .Section8 h1 {
+    font-size: 3.5rem;
+  }
+
+  .parag {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Section8 h1 {
+    font-size: 2.5rem;
+  }
+
+  .parag {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Section8 h1 {
+    font-size: 2rem;
+  }
+
+  .parag {
+    font-size: 0.9rem;
+  }
+}
+
+.Section9 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Section9 img {
+  opacity: 0.99;
+}
+
+.Section9 .card {
+  height: 90%;
+}
+
+.Section9 .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Footer ***********************************************************************************************************************************/
