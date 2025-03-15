@@ -11,20 +11,6 @@ body {
     margin: 0;
   }
   
-  /* Footer */
-  footer {
-    background-color: #333;
-  }
-  
-  footer a {
-    color: #bbb;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    color: #fff;
-  }
-  
   /* Navbar ***********************************************************************************************************************************/
 .navbar {
     position: relative;
@@ -37,7 +23,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-  }
+}
   
   /* Sidebar Styles */
   .side-nav {
@@ -75,7 +61,7 @@ body {
     cursor: pointer;
     position: fixed;
     left: 15px;
-    top: 15px;
+    top: 2px; /*improved by me*/
     z-index: 1000;
     background: #000;
     color: #fff;
@@ -114,6 +100,7 @@ body {
   .menu-checkbox:checked ~ .side-nav {
     transform: translateX(0);
   }
+  /* media ************/
   
   @media (max-width: 990px) {
     .menu-icon {
@@ -154,8 +141,6 @@ body {
   
   .main h1 {
     font-size: 4.5rem;
-    font-weight: 700;
-    color: white;
   }
 
   
@@ -212,28 +197,27 @@ body {
     }
   }  
 /* Section2 ***********************************************************************************************************************************/
-.section2 {
+/* .section2 {
     height: 100vh;
   }
   
   .Section2 .full-height-img {
     height: 100%;
     object-fit: cover;
-  }
+  } */
 
 /* Section7 ***********************************************************************************************************************************/
-
 
   /* Ensures smaller images are the same size as the larger ones on mobile screens */
   @media (max-width: 450px) {
     .small-mg img{
-      width: 250px !important; /* Match larger image size */
-      height: 200px !important; /* Match larger image size */
+      width: 250px !important; 
+      height: 200px !important;
     }
-    .col-sm-12 {
+    /* .col-sm-12 {
       display: block;
       width: 100%;
-    }
+    } */
   }
 
 
@@ -249,23 +233,17 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
-
-.Section5 h1 {
+ .Section5 h1 {
   font-size: 4.5rem;
-  font-weight: 700;
-  color: white;
 }
 
-.parag {
-  color: white;
-}
 
 @media (max-width: 1200px) {
   .Section5 h1 {
     font-size: 3.5rem;
   }
 
-  .parag {
+  .parag5 {
     font-size: 1.1rem;
   }
 }
@@ -275,7 +253,7 @@ body {
     font-size: 2.5rem;
   }
 
-  .parag {
+  .parag5 {
     font-size: 1rem;
   }
 }
@@ -285,10 +263,10 @@ body {
     font-size: 2rem;
   }
 
-  .parag {
+  .parag5 {
     font-size: 0.9rem;
   }
-}
+} 
 
 
   /* Section8 ***********************************************************************************************************************************/
@@ -307,12 +285,6 @@ body {
 
 .Section8 h1 {
   font-size: 4.5rem;
-  font-weight: 700;
-  color: white;
-}
-
-.parag {
-  color: white;
 }
 
 @media (max-width: 1200px) {
@@ -320,7 +292,7 @@ body {
     font-size: 3.5rem;
   }
 
-  .parag {
+  .parag8 {
     font-size: 1.1rem;
   }
 }
@@ -330,7 +302,7 @@ body {
     font-size: 2.5rem;
   }
 
-  .parag {
+  .parag8 {
     font-size: 1rem;
   }
 }
@@ -340,7 +312,20 @@ body {
     font-size: 2rem;
   }
 
-  .parag {
+  .parag8 {
     font-size: 0.9rem;
   }
 }
+/* Footer ***************************************************************************************************************************************/
+/* footer {
+  background-color: #333;
+}
+
+footer a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+ footer a:hover {
+  color: #fff;
+}  */
