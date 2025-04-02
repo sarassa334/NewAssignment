@@ -2,11 +2,12 @@ let str='nour ';
 // console.log(str.length);
 // ================================================================================================================================
 function validateDescription(description){
-    if(description>100){
-        return "description is too long"
+    if(description.length > 100){
+        return "description is too long";
     }
-    return "description is validate"
+    return "description is valid";
 }
+
 
 // console.log(
 //     validateDescription("bshvbhvsfjsfcjgcsjbkjbs")

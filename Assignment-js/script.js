@@ -6,7 +6,7 @@
 
 // first lecture
  //number
- let x=13;
+let x=13;
 let y=1.5;
 
 //string
