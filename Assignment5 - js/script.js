@@ -78,7 +78,7 @@ function maskPhone(phone) {
   return phone.replace(phone.length - 3, "*") + phone.slice(phone.length - 3);
 }
 
-// console.log(maskPhone(phone))
+console.log(maskPhone(phone))
 //6.2
 function maskPhone(phone) {
   return phone.replace(phone(0, 6), "*") + phone.slice(phone.length - 3);
