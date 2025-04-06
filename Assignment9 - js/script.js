@@ -2,6 +2,22 @@
 //  Count Vowels in a String
 // Write a function that counts how many vowels (a, e, i, o, u) are in a given string (case-insensitive).
 //=========================
+//1 My Solution
+// function countVowels(str){
+// let count = 0;
+// let vowelArr = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+// for (i=0; i<str.length; i++){
+// if (vowelArr.includes(str[i])){
+//     ++count;
+// }
+// }
+// return count;
+// }
+// console.log(countVowels("JavaScript")); // Output: 3
+// console.log(countVowels("Sara")); // Output: 2
+//=========================
+//2 Chatgbt
 // function countVowels(str) {
 //     let vowels = ["a", "e", "i", "o", "u"];
 //     let count = 0;
@@ -16,11 +32,10 @@
 
 //     return count;
 // }
-
-// // Example usage:
 // console.log(countVowels("JavaScript")); // Output: 3
 // console.log(countVowels("Sara")); // Output: 2
-//===================================================================================================================
+
+//==============================================================================================================================================
 //2
 // Check Even or Odd Numbers in an Array
 // Write a function that takes an array of numbers and prints "even" if the number is even, or "odd" if the number is odd.
@@ -33,19 +48,27 @@
 // odd
 // even
 //=========================
+//1 My Solution
+// function even_or_odd_arr(arr){
+// for(i=0;i<arr.length;i++){
+// if (arr[i] % 2 === 0){
+//     console.log("even");
+// }else if (arr[i] % 2 !== 0){
+//     console.log("odd");
+// }
+// }
+// }
+// console.log(even_or_odd_arr([1, 4, 7, 10]));
 
+//=========================
+//2 best solution acording to Chatgbt (i wrote it)
 // function even_or_odd_arr(arr) {
-//     for (let i = 0; i < arr.length; i++) {  // Fix the loop condition
-//         if (arr[i] % 2 === 0) {
-//             console.log("Even");
-//         } else {
-//             console.log("Odd");
-//         }
+//     for (let i = 0; i < arr.length; i++) {
+//         console.log(arr[i] % 2 === 0 ? "even" : "odd");
 //     }
 // }
-
 // // Example usage:
-// even_or_odd_arr([8, 7, 8, 5, 4]);
+// even_or_odd_arr([1, 4, 7, 10]);
 
 //===================================================================================================================
 //3
@@ -56,42 +79,66 @@
 // Input: "I love JavaScript programming"
 // Output: "programming"
 //=========================
+//1 My Solution
 
-// function findLongestWord(sentence) {
-//     let wordsArr = sentence.split(" "); // Split the sentence into an array of words
-//     let longestWord = ""; // Variable to store the longest word
-
-//     for (let i = 0; i < wordsArr.length; i++) {
-//         if (wordsArr[i].length > longestWord.length) {
-//             longestWord = wordsArr[i]; // Update the longest word
-//         }
-//     }
-
-//     return longestWord;
+// function longestWord(str){
+// let strArr = str.split(" ");
+// let longestWord = "";
+// for(let i=0; i<strArr.length;i++){
+// if (strArr[i].length > longestWord.length){
+//     longestWord = strArr[i];
 // }
+// }
+// return longestWord;
+// }
+// console.log(longestWord("I love JavaScript programming")); // Output: "programming"
 
-// // Example usage:
-// console.log(findLongestWord("I love JavaScript programming")); // Output: "JavaScript"
+//=========================
+//2 chatgbt (best solution)
 
+// function longestWord(str) {
+//     return str.split(" ").reduce((longest, current) => {
+//         return current.length > longest.length ? current : longest;
+//     }, "");
+// }
+// console.log(longestWord("I love JavaScript programming")); // Output: "programming"
 
 //===================================================================================================================
 //4
 // FizzBuzz Problem
 // Print numbers from 1 to 50. For multiples of 3, print "Fizz", for multiples of 5, print "Buzz", and for multiples of both, print "FizzBuzz".
 //=========================
+//1 My Solution
 
-// for (let i = 1; i <= 50; i++) {
+// function FizzBuzz() {
+//   for (let i = 1; i <= 50; i++)
 //     if (i % 3 === 0 && i % 5 === 0) {
-//         console.log("FizzBuzz"); // If divisible by both 3 and 5
+//       console.log("FizzBuzz");
 //     } else if (i % 3 === 0) {
-//         console.log("Fizz"); // If divisible by 3 only
-//     } else if (i % 5 === 0) {
-//         console.log("Buzz"); // If divisible by 5 only
-//     } else {
-//         console.log(i); // Otherwise, print the number
+//       console.log("Fizz");
+//     }else if (i % 5 === 0){
+//         console.log("Buzz"); 
+//     }else{
+//         console.log(i);
 //     }
 // }
+// FizzBuzz();
 
+//=========================
+//2 chatgbt (best solution)
+// function FizzBuzz() {
+//     for (let i = 1; i <= 50; i++) {
+//       let result = '';
+      
+//       if (i % 3 === 0) result += 'Fizz';  // Add "Fizz" if divisible by 3
+//       if (i % 5 === 0) result += 'Buzz';  // Add "Buzz" if divisible by 5
+  
+//       console.log(result || i);  // If result is empty, print the number itself
+//     }
+//   }
+  
+//   FizzBuzz();
+  
 //===================================================================================================================
 //5
 // Find the Second Largest Number in an Array
@@ -101,41 +148,41 @@
 // Input: [10, 5, 20, 8, 12]
 // Output: 12
 //=========================
-// using sort
-// let a = [1, 5, 9, 6, 3, 87, 72, 23];
+// chatgbt (without sort)
 
-// function largest(array) {
-//     array.sort((a, b) => a - b); 
-//     return array[array.length - 2]; 
-// }
-
-// console.log(largest(a)); 
-
-//=========================
-// without using sort(gbt)
-// function findSecondLargest(array) {
-//     if (array.length < 2) {
-//         return "Array must have at least two numbers.";
+// function secondLargest(arr) {
+//     if (arr.length < 2) {
+//         return "Array must have at least two elements";
 //     }
 
-//     let largest = -Infinity;
-//     let secondLargest = -Infinity;
+//     let largest = -Infinity;  // Initialize to negative infinity
+//     let secondLargest = -Infinity;  // Initialize to negative infinity
 
-//     for (let i = 0; i < array.length; i++) {
-//         if (array[i] > largest) {
-//             secondLargest = largest;
-//             largest = array[i];
-//         } else if (array[i] > secondLargest && array[i] !== largest) {
-//             secondLargest = array[i];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > largest) {
+//             secondLargest = largest;  // Update second largest
+//             largest = arr[i];  // Update largest
+//         } else if (arr[i] > secondLargest && arr[i] !== largest) {
+//             secondLargest = arr[i];  // Update second largest if condition matches
 //         }
 //     }
 
 //     return secondLargest;
 // }
 
-// // Example usage:
+// console.log(secondLargest([10, 5, 20, 8, 12]));  // Output: 12
+
+//=========================
+// chatgbt (with sort)
+// using sort
 // let a = [1, 5, 9, 6, 3, 87, 72, 23];
-// console.log(findSecondLargest(a)); // Output: 72
+
+// function largest(array) {
+//     array.sort((a, b) => a - b);
+//     return array[array.length - 2];
+// }
+
+// console.log(largest(a));
 
 //===================================================================================================================
 //6
@@ -146,7 +193,23 @@
 // Input: [1, [2, [3, 4], 5], 6]
 // Output: [1, 2, 3, 4, 5, 6]
 //=========================
-// (gbt)
+//1 My Solution (using hints)
+
+// function flattenArray(arr){
+//     let flatArr =[];
+// for(let i=0;i<arr.length;i++){
+//     if(Array.isArray(arr[i])){
+//         flatArr = flatArr.concat(flattenArray(arr[i])); //from chat
+//     }else{
+//     flatArr.push(arr[i]);
+//     }
+// }
+// return flatArr;
+// }
+// console.log(flattenArray([1, [2, [3, 4], 5], 6]));
+
+//=========================
+//2 chat gbt
 
 // function flattenArray(arr) {
 //     let result = [];
@@ -178,53 +241,4 @@
 // let nestedArray = [1, [2, [3, 4], 5], 6];
 // console.log(flattenArray(nestedArray)); // Output: [1, 2, 3, 4, 5, 6]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //=========================
-// (me)
-
-
-// let arr = [];
-
-// function flattenArray(){
-//     let result = [];
-//     for (let i = 0; i < arr.length; i++){
-//         if (typeof arr[i] === )
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -41,3 +41,63 @@
 // console.log(finalGrade(55, 3)); // 75
 // console.log(finalGrade(55, 0)); // 0
 // console.log(finalGrade(20, 2)); // 0
+
+//==============================================================================================================================================
+//2 Replace all vowel to exclamation mark in the sentence
+// //1 My Solution (تخبيصي ما الو داعي بس حتى اراقب تقدمي) 
+
+// // function replace(str) {
+// //   let strArr = str.split("");
+// //   vowelArr = ["a","e","i","o","u","A","E","I","O","U"];
+// //   if(strArr.some(char => vowelArr.includes(char))=== true){
+// //   }
+// // }
+// // console.log(replace("sara")); //s!r!
+
+//===========================================
+// //1 My Solution(with some help)
+// function replace(str) {
+//     let strArr = str.split(""); // Convert string to array
+//     let vowelArr = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+    
+//     for (let i = 0; i < strArr.length; i++) {
+//         if (vowelArr.includes(strArr[i])) {
+//             strArr[i] = "!"; // Replace vowel with "!"
+//         }
+//     }
+    
+//     return strArr.join(""); // Convert array back to a string
+// }
+
+// console.log(replace("sara")); // "s!r!"
+// console.log(replace("hello")); // "h!ll!"
+// console.log(replace("xyz")); // "xyz" (no changes)
+
+//===========================================
+//2 chatgbt (Best Solution )
+
+// function replace(str) {
+//     let vowelArr = new Set(["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]);
+
+//     return str
+//         .split("")
+//         .map(char => (vowelArr.has(char) ? "!" : char))
+//         .join("");
+// }
+
+// //2 
+// // function replace(s) {
+// //     return s.replace(/[aeiou]/ig, '!');  
+// //   }
+  
+
+// console.log(replace("sara"));  // "s!r!"
+// console.log(replace("hello")); // "h!ll!"
+// console.log(replace("xyz"));   // "xyz" (no changes)
+
+
+
+
+
+
+
