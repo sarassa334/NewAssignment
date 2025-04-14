@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-------------------------- كود الفورم ----------- -->
+    <form>
+      <input type="text" id="name" />
+      <input type="number" id="age"/>
+      <input type="email" id="email" />
+    </form>
+
+    <div>
+      <button onclick="addUser()">Add User</button>
+      <button onclick="viewUser()">view User</button>
+
+
+      <table id="table" border="1">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>email address</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+
+
+
+    <!-- ----------كود الجدول و اضافة البيانات يدويا او من الاوبجكت------------ -->
+    <!-- <div>
+      <button onclick="addRow()">Add</button>
+
+      <table id="table" border="1">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>email address</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
