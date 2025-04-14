@@ -26,10 +26,10 @@ section.vh-100 {
   padding-top: 0;
   padding-bottom: 0;
 }
-.row {
+/* .row {
   margin-top: 0;
   margin-bottom: 0;
-}
+} */
 .col-lg-6 img {
   /* margin-top: -10px;  */
   margin-bottom: 0; 
@@ -44,10 +44,10 @@ body {
   padding-right: 0; 
 }
 
-.row {
+/* .row {
   margin-left: 0;
   margin-right: 0; 
-}
+} */
 /* cards */
 .card {
   width: 100%; 
@@ -69,6 +69,9 @@ body {
 }
 /* ********************************************** */
 
+#cardViewContent {
+  padding: 20px;
+}
 
 
 
