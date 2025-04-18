@@ -30,7 +30,7 @@
 
 const fs = require('fs');
 
-const filePath = 'backend/lecture1/mydata.txt';
+const filePath = 'mydata.txt';
 
 // Step 1: Create some sample text with extra spaces
 const originalText = '   Hello Othman, Welcome to Node.js. Node.js is Awesome!   ';
