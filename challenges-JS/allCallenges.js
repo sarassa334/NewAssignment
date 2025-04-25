@@ -701,6 +701,29 @@
 // console.log(stringToNumber("-56")); // ✅ -56
 // console.log(stringToNumber("3.14")); // ✅ 3.14
 
+//=======================================================================================================================================================================================
+// 24- Count The Monkeys
+//1 my solution 
+
+// function countMonkeys(n){
+// let arr=[];
+// for (let i=1; i<=n ;i++){
+// arr.push(i);
+// }
+// return arr;
+// }
+// console.log(countMonkeys(10));
+// console.log(countMonkeys(1));
+// console.log(countMonkeys(5));
+
+
+
+
+
+
+
+
+
 
 
 
