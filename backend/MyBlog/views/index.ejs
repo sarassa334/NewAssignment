@@ -1,0 +1,27 @@
+
+  <!-- Include Header -->
+  <%- include('partials/header') %>
+
+  <h1 class="mt-5">My Blog</h1>
+  <a href="/new" class="btn btn-primary mt-3">Create New Post</a>
+
+  <% if (posts.length === 0) { %>
+    <p>No posts yet!</p>
+  <% } else { %>
+    <ul class="list-group mt-4">
+      <% posts.forEach(post => { %>
+        <li class="list-group-item">
+          <h3><%= post.title %></h3>
+          <p><%= post.content %></p>
+          <a href="/edit/<%= post.id %>" class="btn btn-warning">Edit</a>
+          <a href="/delete/<%= post.id %>" class="btn btn-danger" onclick="return confirm('Delete this post?')">Delete</a>
+        </li>
+      <% }); %>
+    </ul>
+  <% } %>
+
+  <!-- Include Footer -->
+  <%- include('partials/footer') %>
+
+
+
