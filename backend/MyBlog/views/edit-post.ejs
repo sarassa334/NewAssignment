@@ -1,21 +1,26 @@
+<%- include('partials/header') %>
 
-  <%- include('partials/header') %>
+<div class="container" style="margin-top: 80px; max-width: 700px;">
+  <div class="bg-white shadow-sm p-5 rounded">
+    <h2 class="mb-4 text-center fw-bold">Edit Post</h2>
 
-  <h1 class="mt-5">Edit Post</h1>
-  <form action="/edit/<%= post.id %>" method="POST" class="mt-3">
-    <div class="mb-3">
-      <label for="title" class="form-label">Title:</label>
-      <input type="text" id="title" name="title" class="form-control" value="<%= post.title %>" required>
-    </div>
-    <div class="mb-3">
-      <label for="content" class="form-label">Content:</label>
-      <textarea id="content" name="content" class="form-control" rows="6" required><%= post.content %></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Update Post</button>
-  </form>
+    <form action="/edit/<%= post.id %>" method="POST">
+      <div class="mb-4">
+        <label for="title" class="form-label fw-semibold">Title</label>
+        <input type="text" id="title" name="title" class="form-control form-control-lg" value="<%= post.title %>" required>
+      </div>
 
-  <br>
-  <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+      <div class="mb-4">
+        <label for="content" class="form-label fw-semibold">Content</label>
+        <textarea id="content" name="content" class="form-control" rows="7" required><%= post.content %></textarea>
+      </div>
 
-  <!-- Include Footer -->
-  <%- include('partials/footer') %>
+      <div class="d-flex justify-content-between flex-wrap gap-2">
+        <button type="submit" class="btn btn-primary px-4">Update Post</button>
+        <a href="/" class="btn btn-outline-secondary">← Back to Home</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
