@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: #FAFAFA !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Custom styles for logo */
+.navbar-brand {
+  margin-left: 5px;
+}
+.navbar-divider {
+  border-top: 1px solid #ccc; /* Color of the horizontal line */
+  margin-top: 10px; /* Space above the line */
+  margin-bottom: 10px; /* Space below the line */
+}
+/* parent */
+.parent {
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+  max-width: 1200px;
+  width: 95%;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); */
+  background-color: #fafafa;
+  border-radius: 8px;
+  /* min-height: 800px; */
+}
+button.docbt, button.docbt2{
+    width: 230px;
+    height: 80px;
+    padding: 24px 40px;
+    background-color: white !important;
+    border: 1px solid #ccc !important;
+    border-radius: 1rem;
+    color: #333 !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+  
+  button.docbt:hover {
+    border-color: #99A2F9 !important;  
+    
+  }
+  button.docbt2:hover {
+    border-color: #4ADE80 !important;  
+    
+  }
+  
+ .icon1{
+    background-color: #EEF2FF;
+    padding: 12px;
+    border-radius: 0.6rem;
+    border: 1px solid #CED8FE;
+    color: #4F46E5 !important;
+
+} 
+ .icon2{
+    background-color: #F0FDF4;
+    padding: 12px;
+    border-radius: 0.6rem;
+    border: 1px solid #CED8FE;
+    color: #4CB974 !important;
+ 
+} 
+.gray{
+    color: #7A777A;
+    font-size: large;
+    font-weight: 400;
+}
+.myPost{
+    border: 1px solid red;
+    border-radius: 0.6rem;
+    
+}
